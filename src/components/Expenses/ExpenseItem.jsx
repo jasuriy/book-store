@@ -1,4 +1,6 @@
 import React from "react";
+import Card from "../UI/Card";
+import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 
 const ExpenseItem = (props) => {
@@ -6,19 +8,15 @@ const ExpenseItem = (props) => {
   const day = props.date.toLocaleString('en-US', {day:'2-digit'})
   const year = props.date.getFullYear();
   return (
-    <div className="expense-item">
-     <div>
-       <div>{month}</div>
-       <div>{year}</div>
-       <div>{day}</div>
-     </div>
+    <Card className="expense-item">
+    <ExpenseDate date={props.date}/>
       <div className="expense-item__description">
         <div className="expense-item__name">
           <h2>{props.title}</h2>
         </div>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 };
 
