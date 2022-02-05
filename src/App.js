@@ -6,19 +6,19 @@ import NewExpense from "./components/NewExpense/NewExpense";
 const DUMMY_EXPENSES = [
   {
     id: "e1",
-    title: "JavaScript",
+    title: "The Monk who sold his Ferrari",
     amount: 9.99,
     date: new Date(2021, 2, 8),
   },
   {
     id: "e2",
-    title: "React js",
+    title: "Who will cry when you die",
     amount: 12.99,
     date: new Date(2022, 1, 3),
   },
   {
     id: "e3",
-    title: "Next js",
+    title: "The Leader who had no title",
     amount: 9.99,
     date: new Date(2020, 4, 7),
   },
