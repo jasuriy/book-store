@@ -1,18 +1,228 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.container {
+  width: 100%;
+  max-width: 50rem;
+  height: 100%;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0 auto;
 }
-.App {
+
+.title {
+  margin-bottom: 30px;
+  color: white;
+}
+
+.expense-item {
+  background-color: #555;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.expense-item-description {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  margin-right: 20px;
+}
+
+.expense-item-description h2 {
+  color: white;
+}
+
+.expense-item-price {
+  background-color: darkviolet;
+  border: 1px solid white;
+  padding: 15px 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.expense-date {
+  width: 100px;
+  border: 1px solid white;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.expense_date_month {
+  font-size: 18px;
+}
+
+.expense_date_year {
+  font-size: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.expense_date_day {
+  font-size: 24px;
+}
+
+.expenses {
+  width: 100%;
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  border-radius: 20px;
+  box-shadow: 0 1px 8px #111;
+  margin-bottom: 20px;
+}
+
+.new-expense{
+  background-color:mediumpurple;
+  width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 8px #111;
+  text-align: center;
+}
+
+.new-expense-controls{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.new-expense-control label{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.new-expense-control input{
+  width: 100%;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
+
+.new-expense-actions{
+  display: flex;
+  justify-content: right;
+  gap: 20px;
+
+}
+
+.new-expense-actions button{
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: darkviolet;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.new-expense-actions button:hover{
+  background-color: rgb(116, 1, 165);
+}
+
+.expense-filter-control{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expense-filter-control label{
+  color: white;
+  font-weight: bold;
+}
+
+.expense-filter-control select{
+  padding: 7px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.no-expenses-found{
+  color: red;
+}
+
+.expense-list_fallback{
+  text-align: center;
+  color: white;
+}
+
+.add-expense-button{
+  background-color: darkviolet;
+  color: white;
+  border: 1px solid white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-expense-button:hover{
+  background-color: rgb(100, 0, 143);
+}
+
+.chart{
+  padding: 1rem;
+  border-radius: 15px;
+  background-color: #f8dfff;
   text-align: center;
   display: flex;
-  justify-content: center;
-  vertical-align: middle;
-  margin: 0 auto;
-  align-items: center;
-  height: 100vh;
-  background: rgb(61, 60, 60);
-  font-weight: 600;
+  justify-content: space-around;
+  height: 10rem;
 }
 
+.chart-bar{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.chart-bar-inner{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #313131;
+  background-color: #c3b4f3;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+}
+
+.chart-bar-fill{
+  background-color: #4826b9;
+  width: 100%;
+  transition: all 0.3 ease-out;
+}
+
+.chart-bar-label{
+  font-weight: bold;
+  font-size: .6rem;
+  text-align: center;
+  margin-top: 5px;
+}

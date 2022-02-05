@@ -1,22 +1,19 @@
-import React from "react";
-import Card from "../UI/Card";
+import React, { useState } from "react";
+import "../../App.css";
 import ExpenseDate from "./ExpenseDate";
-import "./ExpenseItem.css";
+import Card from "../UI/Card";
 
 const ExpenseItem = (props) => {
-  const month = props.date.toLocaleString('eng-US', {month:'long'})
-  const day = props.date.toLocaleString('en-US', {day:'2-digit'})
-  const year = props.date.getFullYear();
   return (
-    <Card className="expense-item">
-    <ExpenseDate date={props.date}/>
-      <div className="expense-item__description">
-        <div className="expense-item__name">
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={props.date} />
+        <div className="expense-item-description">
           <h2>{props.title}</h2>
+          <div className="expense-item-price">$ {props.amount}</div>
         </div>
-        <div className="expense-item__price">${props.amount}</div>
-      </div>
-    </Card>
+      </Card>
+    </li>
   );
 };
 
